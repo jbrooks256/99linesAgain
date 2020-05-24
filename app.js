@@ -17,25 +17,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
       for (let c = 99; c >= 1; c--) {
         if (c == 1) {
-          console.log(
+          paragraph.innerText += 
             c +
-              " line of code in the file, " +
-              c +
-              " line of code; " +
-              friends[i] +
-              " strikes out, clears it all out, no more lines of code in the file"
-          );
+            " line of code in the file, " +
+            c +
+            " line of code; " +
+            friends[i] +
+            " strikes out, clears it all out, no more lines of code in the file"
         } else {
-          console.log(
+          paragraph.innerText += 
             c +
-              " lines of code in the file, " +
-              c +
-              " lines of code; " +
-              friends[i] +
-              " strikes out, clears it all out, " +
-              (c - 1) +
-              " lines of code in the file"
-          );
+            " lines of code in the file, " +
+            c +
+            " lines of code; " +
+            friends[i] +
+            " strikes out, clears it all out, " +
+            (c - 1) +
+            " lines of code in the file"
         }
       }
       myFriend.appendChild(paragraph);
