@@ -4,33 +4,16 @@ document.addEventListener("DOMContentLoaded", function () {
   let div = document.createElement("div");
   div.className = "friend";
 
-  let Don = document.createElement("h3")
-  let Sherm = document.createElement("h3")
-  let Sean = document.createElement("h3")
-  let Ricky = document.createElement("h3")
-  let Chris = document.createElement("h3")
-
-  Don.innerText = "Don"
-  Sherm.innerText = "Sherm"
-  Sean.innerText = "Sean"
-  Ricky.innerText = "Ricky"
-  Chris.innerText = "Chris"
-
-  div.appendChild(Don);
-  div.appendChild(Sherm);
-  div.appendChild(Sean);
-  div.appendChild(Ricky);
-  div.appendChild(Chris);
-
-  document.body.appendChild(div);
-
   let button = document.createElement("button");
   button.innerText = "Sing!";
   document.body.appendChild(button);
 
   button.addEventListener("click", function () {
     for (let i = 0; i < friends.length; i++) {
-      console.log(friends[i]);
+      let myFriend = document.createElement("h3");
+      myFriend.innerText = friends[i];
+
+      let paragraph = document.createElement("p");
 
       for (let c = 99; c >= 1; c--) {
         if (c == 1) {
@@ -55,6 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
           );
         }
       }
+      myFriend.appendChild(paragraph);
+      div.appendChild(myFriend);
+      document.body.appendChild(div);
     }
   });
 });
